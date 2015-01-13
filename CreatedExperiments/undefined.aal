@@ -1,0 +1,6 @@
+agents:
+groups:
+streamstarts: [ eventstreams:
+  cleanupstream:
+    - type: trigger
+      triggers: [ { event: , target: exit} ]

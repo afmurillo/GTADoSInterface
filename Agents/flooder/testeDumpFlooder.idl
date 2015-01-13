@@ -1,0 +1,93 @@
+description: A packet flooding utility.
+display: A wrapper around the Flooder utility
+execute: thread
+inherits: [DispatchAgent]
+mainfile: flooder.py
+methods:
+- args: []
+  help: start the flood
+  name: startFlood
+- args: []
+  help: stop the flood
+  name: stopFlood
+name: Flooder
+software: [libnet-dev, libpcap-dev, flooder]
+variables:
+- {help: 'The CIDR representation of the destination(s) to flood. Format: "A.A.A.A/N"  (cidr),
+    "A.A.A.A/M.M.M.M" (address and mask), "A.A.A.A" (single address).', name: dst,
+  type: string}
+- {help: The protocol to flood with. Must be one of 'udp' or 'tcp'., name: proto,
+  type: string}
+- {help: 'The length(s) of the packets. Format must be "minmax(A,B)" or string representation
+    of an integer ("1.23").', name: length, type: string}
+- {help: 'The type of rate to flood: one of "flat", "rampup", or "pulse".', name: ratetype,
+  type: string}
+- {help: The highest value to flood at in packets per second., name: highrate, type: int}
+- {help: 'When using the ''pulse'' rate type, how long to remain in the high state.
+    Units are in milliseconds.', name: hightime, type: int}
+- {help: The lowest value to flood at in packets per second., name: lowrate, type: int}
+- {help: 'When using the ''pulse'' rate type, how long to remain in the low state.
+    Units are in milliseconds.', name: lowtime, type: int}
+- {help: The amount of time to rise from low to high when using the 'pulse' rate type.,
+  name: risetime, type: int}
+- {help: The amount of time to fall from high to low when using the 'pulse' rate type.,
+  name: falltime, type: int}
+- {help: This is the help., name: sport, type: int}
+- {help: This is the help., name: dport, type: int}
+description: A packet flooding utility.
+display: A wrapper around the Flooder utility
+execute: thread
+inherits: [DispatchAgent]
+mainfile: flooder.py
+methods:
+- args: []
+  help: start the flood
+  name: startFlood
+- args: []
+  help: stop the flood
+  name: stopFlood
+name: Flooder
+software: [libnet-dev, libpcap-dev, flooder]
+variables:
+- {help: 'The CIDR representation of the destination(s) to flood. Format: "A.A.A.A/N"  (cidr),
+    "A.A.A.A/M.M.M.M" (address and mask), "A.A.A.A" (single address).', name: dst,
+  type: string}
+- {help: The protocol to flood with. Must be one of 'udp' or 'tcp'., name: proto,
+  type: string}
+- {help: 'The length(s) of the packets. Format must be "minmax(A,B)" or string representation
+    of an integer ("1.23").', name: length, type: string}
+- {help: 'The type of rate to flood: one of "flat", "rampup", or "pulse".', name: ratetype,
+  type: string}
+- {help: The highest value to flood at in packets per second., name: highrate, type: int}
+- {help: 'When using the ''pulse'' rate type, how long to remain in the high state.
+    Units are in milliseconds.', name: hightime, type: int}
+- {help: The lowest value to flood at in packets per second., name: lowrate, type: int}
+- {help: 'When using the ''pulse'' rate type, how long to remain in the low state.
+    Units are in milliseconds.', name: lowtime, type: int}
+- {help: The amount of time to rise from low to high when using the 'pulse' rate type.,
+  name: risetime, type: int}
+- {help: The amount of time to fall from high to low when using the 'pulse' rate type.,
+  name: falltime, type: int}
+- {help: This is the help., name: sport, type: int}
+- {help: This is the help., name: dport, type: int}
+description: A packet flooding utility.
+display: A wrapper around the Flooder utility
+execute: thread
+inherits: [DispatchAgent]
+mainfile: flooder.py
+methods:
+- args: []
+  help: start the flood
+  name: startFlood
+- args: []
+  help: stop the flood
+  name: stopFlood
+name: Flooder
+software: [libnet-dev, libpcap-dev, flooder]
+variables:
+- {help: 'The CIDR representation of the destination(s) to flood. Format: "A.A.A.A/N"  (cidr),
+    "A.A.A.A/M.M.M.M" (address and mask), "A.A.A.A" (single address).', name: dst,
+  type: string}
+- {help: The protocol to flood with. Must be one of 'udp' or 'tcp'., name: proto,
+  type: string}
+- {help: 'The length(s) of the packets. Format must be "minmax(A,B)" or string representation

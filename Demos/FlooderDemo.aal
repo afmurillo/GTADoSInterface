@@ -1,0 +1,43 @@
+agents:
+  attack_agent:
+    group: attackers
+    path: flooder
+    execargs: []
+
+groups:
+  attackers: [attackNode-1, attackNode-2, attackNode-3]
+  servers: [servernode]
+  
+streamstarts: [ attackstream ]
+eventstreams:
+  attackstream:
+    - type: event
+      agent: attack_agent
+      method: setConfiguration
+      args:
+        src: '10.1.1.32'
+        lowtime: '1001'
+        proto: 'tcp'
+        dst: '10.1.2.2'
+        hightime: '1001'
+        risetime: '51'
+        length: 'minmax(101,1000)'
+        ratetype: 'pulse'
+        dport: 'minmax(1001,1011)'
+        highrate: '6000'
+        lowrate: '5000'
+        falltime: '51'
+        sport: 'minmax(1001,1011)'
+    - type: event
+      agent: attack_agent
+      method: startFlood
+      args: {}
+    - type: trigger
+      triggers: [{timeout: 5000}]
+#    - type: trigger
+#      triggers: [ { event: floodStarted } ]
+    - type: event
+      agent: attack_agent
+      method: stopFlood
+      trigger: stopFlood
+      args: {}
